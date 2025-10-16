@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Producto",
+  "description": "Representa un producto dentro de un pedido",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "cantidad": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "id",
+    "nombre",
+    "cantidad"
+  ]
+}
