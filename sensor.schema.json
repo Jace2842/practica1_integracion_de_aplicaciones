@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sensor",
+  "type": "object",
+  "required": ["id","nombre","tipo","ubicacionId"],
+  "properties": {
+    "id": {"type":"string"},
+    "nombre": {"type":"string"},
+    "tipo": {"type":"string"},
+    "ubicacionId": {"type":"string"}
+  },
+  "additionalProperties": true
+}
