@@ -30,6 +30,16 @@ El proyecto forma parte de una práctica académica cuyo objetivo es **definir u
 
 ---
 
+## Presentación del Proyecto
+
+La presentación del proyecto se encuentra en este repositorio y en Prezi.
+
+- PDF de la presentación: [Fresh&Go-AQ.INICIAL.pdf](PresentacionYPDF/Fresh&Go-AQ.INICIAL.pdf)  
+- Escanea el QR para acceder a la presentación online, ubicado en la carpeta del enlace: ![QR Presentación](PresentacionYPDF)
+- Enlace directo a Prezi: [Presentación en Prezi](https://prezi.com/view/S4qhZFBD8hRKz6VAyJtk/?referral_token=oTccAslnB3FN)
+
+
+---
 ##  Arquitectura del Sistema
 
 La arquitectura está basada en el **modelo C4**, distribuida en varios niveles:
@@ -51,6 +61,7 @@ PRACTICA1/
 ├─ diagrama/       → Archivos HTML con diagramas de cada nivel de la arquitectura (Contexto, Contenedores, Componentes, Lógica)
 ├─ docs/           → Documentación adicional en PDF (ej. Fresh&Go-AQ.INICIAL.pdf) que resume la información y los diagramas
 ├─ README.md       → Documentación principal del proyecto
+
 
 
 
