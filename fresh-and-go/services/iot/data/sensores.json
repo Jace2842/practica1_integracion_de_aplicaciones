@@ -1,0 +1,65 @@
+[
+  {
+    "id": "SENS001",
+    "nombre": "Sensor Temperatura Vehículo 1",
+    "tipo": "temperatura",
+    "ubicacionId": "VEH001",
+    "valor": "-2.3°C"
+  },
+  {
+    "id": "SENS002",
+    "nombre": "GPS Vehículo 1",
+    "tipo": "gps",
+    "ubicacionId": "VEH001",
+    "valor": "40.4168°N, 3.7038°W"
+  },
+  {
+    "id": "SENS003",
+    "nombre": "Sensor Humedad Vehículo 2",
+    "tipo": "humedad",
+    "ubicacionId": "VEH002",
+    "valor": "68.5%"
+  },
+  {
+    "id": "SENS004",
+    "nombre": "Sensor Temperatura Vehículo 2",
+    "tipo": "temperatura",
+    "ubicacionId": "VEH002",
+    "valor": "-1.8°C"
+  },
+  {
+    "id": "SENS005",
+    "nombre": "Sensor Temperatura Almacén",
+    "tipo": "temperatura",
+    "ubicacionId": "ALM001",
+    "valor": "-5.2°C"
+  },
+  {
+    "id": "SENS006",
+    "nombre": "Sensor Movimiento Almacén",
+    "tipo": "movimiento",
+    "ubicacionId": "ALM001",
+    "valor": "Sin movimiento"
+  },
+  {
+    "id": "SENS007",
+    "nombre": "Sensor Humedad Almacén",
+    "tipo": "humedad",
+    "ubicacionId": "ALM001",
+    "valor": "45.3%"
+  },
+  {
+    "id": "SENS008",
+    "nombre": "Sensor Presión Vehículo 3",
+    "tipo": "presion",
+    "ubicacionId": "VEH003",
+    "valor": "8.5 bar"
+  },
+  {
+    "id": "SENS009",
+    "nombre": "Sensor CO2 Almacén",
+    "tipo": "co2",
+    "ubicacionId": "ALM001",
+    "valor": "385 ppm"
+  }
+]
