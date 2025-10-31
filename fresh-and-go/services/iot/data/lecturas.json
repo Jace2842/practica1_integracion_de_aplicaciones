@@ -1,0 +1,51 @@
+[
+  {
+    "id": "LECT001",
+    "sensorId": "SENS001",
+    "ubicacionId": "VEH001",
+    "timestamp": "2024-10-31T08:00:00Z",
+    "valor": 4.5,
+    "unidad": "°C"
+  },
+  {
+    "id": "LECT002",
+    "sensorId": "SENS001",
+    "ubicacionId": "VEH001",
+    "timestamp": "2024-10-31T08:15:00Z",
+    "valor": 4.2,
+    "unidad": "°C"
+  },
+  {
+    "id": "LECT003",
+    "sensorId": "SENS001",
+    "ubicacionId": "VEH001",
+    "timestamp": "2024-10-31T08:30:00Z",
+    "valor": 4.8,
+    "unidad": "°C"
+  },
+  {
+    "id": "LECT004",
+    "sensorId": "SENS001",
+    "ubicacionId": "VEH001",
+    "timestamp": "2024-10-31T08:45:00Z",
+    "valor": 5.1,
+    "unidad": "°C"
+  },
+  {
+    "id": "LECT005",
+    "sensorId": "SENS001",
+    "ubicacionId": "VEH001",
+    "timestamp": "2024-10-31T09:00:00Z",
+    "valor": 4.9,
+    "unidad": "°C"
+  },
+  {
+    "id": "LECT006",
+    "sensorId": "SENS002",
+    "ubicacionId": "VEH001",
+    "timestamp": "2024-10-31T08:00:00Z",
+    "valor": 37.3887,
+    "unidad": "lat"
+  }
+]
+ 

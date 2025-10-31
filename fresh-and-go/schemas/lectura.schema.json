@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lectura",
+  "type": "object",
+  "required": ["id","sensorId","ubicacionId","timestamp","valor","unidad"],
+  "properties": {
+    "id": {"type":"string"},
+    "sensorId": {"type":"string"},
+    "ubicacionId": {"type":"string"},
+    "timestamp": {"type":"string","format":"date-time"},
+    "valor": {"type":["number","integer"]},
+    "unidad": {"type":"string"}
+  },
+  "additionalProperties": true
+}
