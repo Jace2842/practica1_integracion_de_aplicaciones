@@ -57,9 +57,9 @@ La arquitectura está basada en el **modelo C4**, distribuida en varios niveles:
 
 ```text
 PRACTICA1/
-├─ schemas/        → Archivos JSON que representan las entidades del sistema
+├─ Modelo de datos(JSON)/        → Archivos JSON que representan las entidades del sistema
 ├─ diagrama/       → Archivos HTML con diagramas de cada nivel de la arquitectura (Contexto, Contenedores, Componentes, Lógica)
-├─ docs/           → Documentación adicional en PDF (ej. Fresh&Go-AQ.INICIAL.pdf) que resume la información y los diagramas
+├─ PresentacionYPDF/           → Documentación adicional Presentacion y PDF (ej. Fresh&Go-AQ.INICIAL.pdf) que resume la información y los diagramas
 ├─ README.md       → Documentación principal del proyecto
 
 
