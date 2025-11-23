@@ -8,7 +8,7 @@ Se incluyen dos servicios independientes: **CRM** y **IoT**, que simulan la lóg
 
 ---
 
-##  Servicio CRM - ID Commit subida: 34f9519
+##  Servicio CRM - I002: Añadido servicio CRM inicial #3 - ID Commit subida: 34f9519
 
 * **Tecnología:** Node.js + Express
 * **Objetivo:** Gestión simulada de clientes, pedidos, proveedores y conductores.
@@ -24,7 +24,7 @@ Se incluyen dos servicios independientes: **CRM** y **IoT**, que simulan la lóg
 
 ---
 
-##  Servicio IoT - ID Commit subida: aabf890
+##  Servicio IoT I002: Añadido servicio IoT inicial #3 - ID Commit subida: aabf890
 
 * **Tecnología:** Python + FastAPI
 * **Objetivo:** Monitoreo de vehículos refrigerados y sensores IoT.
