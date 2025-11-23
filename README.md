@@ -24,7 +24,7 @@ Se incluyen dos servicios independientes: **CRM** y **IoT**, que simulan la lóg
 
 ---
 
-##  Servicio IoT I002: Añadido servicio IoT inicial #3 - ID Commit subida: aabf890
+##  Servicio IoT - I002: Añadido servicio IoT inicial #3 - ID Commit subida: aabf890
 
 * **Tecnología:** Python + FastAPI
 * **Objetivo:** Monitoreo de vehículos refrigerados y sensores IoT.
