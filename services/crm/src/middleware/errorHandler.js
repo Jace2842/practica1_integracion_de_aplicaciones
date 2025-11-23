@@ -1,3 +1,25 @@
+/* 
+======================================================================================
+Nombre : middleware/errorHandler.js
+Descripción : Middleware centralizado para el manejo de errores en Express. Incluye una 
+clase personalizada AppError, control de errores conocidos, validaciones JSON, 
+validaciones AJV, rutas inexistentes y errores internos no controlados.
+
+Detalle:
+- Clase AppError(message, statusCode)
+- errorHandler: middleware principal de errores
+- notFoundHandler: captura rutas inexistentes
+- asyncHandler: wrap para funciones async
+
+---------------------------------------------------------------------------
+HISTÓRICO DE CAMBIOS
+ISSUE     AUTOR    FECHA         DESCRIPCIÓN
+--------  -------  ------------  -----------------------------------------------------
+I001      MQP      19-11-2025    Creación del manejador de errores
+I002      JLC      19-11-2025    Añadido servicio CRM inicial (#3)
+======================================================================================
+*/
+
 /**
  * Middleware centralizado de manejo de errores para Express
  * Gestiona todos los errores de la aplicación en un único lugar

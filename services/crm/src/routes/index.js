@@ -1,3 +1,29 @@
+/* 
+======================================================================================
+Nombre : routes/index.js
+Descripción : Archivo que define los endpoints principales del servicio CRM Express.
+Expone rutas para clientes, pedidos, proveedores y conductores. Cada endpoint usa 
+controllers para la lógica de negocio y validadores AJV para verificar datos de entrada.
+
+Detalle:
+- GET /clientes
+- GET /clientes/:id
+- GET /pedidos
+- GET /pedidos/:id
+- GET /proveedores
+- GET /proveedores/:id
+- GET /conductores
+- GET /conductores/:id
+
+---------------------------------------------------------------------------
+HISTÓRICO DE CAMBIOS
+ISSUE     AUTOR    FECHA         DESCRIPCIÓN
+--------  -------  ------------  -----------------------------------------------------
+I001      MQP      19-11-2025    Creación del módulo de rutas CRM
+I002      JLC      19-11-2025    Añadido servicio CRM inicial (#3)
+======================================================================================
+*/
+
 // Routes - Definición de endpoints
 const express = require('express');
 const router = express.Router();
