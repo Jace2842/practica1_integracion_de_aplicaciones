@@ -1,11 +1,9 @@
-#  Documentación Fresh&Go (Tema2)
-## I002: Añadida documentación inicial: API_ENDPONTS,QUICK_START_VERIFICACION_NIVEL2_CORTO,postman_collection y readme #3  ID Commit:a137e14
-
+#  Documentación - Fresh&Go
 
 ## Guías Rápidas
 
 ###  [QUICK_START.md](QUICK_START.md)
-Cómo iniciar los servicios y hacer pruebas básicas
+Cómo iniciar los servicios y hacer pruebas básicas. **Empieza aquí.**
 
 ###  [API_ENDPOINTS.md](API_ENDPOINTS.md)
 Lista de todos los endpoints con ejemplos de uso.
