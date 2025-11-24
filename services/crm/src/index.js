@@ -1,3 +1,26 @@
+/* 
+======================================================================================
+Nombre : index.js
+Descripción : Archivo de inicialización del servicio CRM Express. Configura la 
+aplicación Express, carga módulos de data, controllers, rutas, schemas de validación 
+con AJV, y centraliza el manejo de errores.
+
+Detalle:
+- Controllers: lógica del negocio en carpeta src/controllers
+- Data: clientes, pedidos y productos en JSON
+- Routes: endpoints en src/routes
+- Middleware: manejo centralizado de errores en src/middleware
+- Inicialización: arranca servidor Express en el puerto 3001
+
+---------------------------------------------------------------------------
+HISTÓRICO DE CAMBIOS
+ISSUE     AUTOR    FECHA         DESCRIPCIÓN
+--------  -------- ------------- -----------------------------------------------------
+I001      MQP       19-11-2025    Creación del servicio CRM base
+I002      JLC       19-11-2025    Añadido servicio CRM inicial (#3)
+======================================================================================
+*/
+
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
