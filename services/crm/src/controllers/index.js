@@ -1,3 +1,29 @@
+/* 
+======================================================================================
+Nombre : controllers/index.js
+Descripción : Módulo que contiene la lógica de negocio del servicio CRM Express. 
+Incluye operaciones de lectura, filtrado y validación para clientes, pedidos,
+proveedores y conductores.
+
+Detalle:
+- clientes.getAll(data, query, validator)
+- clientes.getById(data, id, validator)
+- pedidos.getAll(data, query, validator)
+- pedidos.getById(data, id, validator)
+- proveedores.getAll(data, query, validator)
+- proveedores.getById(data, id, validator)
+- conductores.getAll(data, query, validator)
+- conductores.getById(data, id, validator)
+
+---------------------------------------------------------------------------
+HISTÓRICO DE CAMBIOS
+ISSUE     AUTOR    FECHA         DESCRIPCIÓN
+--------  -------  ------------  -----------------------------------------------------
+I001      MQP      20-11-2025    Creación del módulo de controllers
+I002      JLC      20-11-2025    Añadido servicio CRM inicial (#3)
+======================================================================================
+*/
+
 // Controllers - Lógica de negocio
 
 module.exports = {
