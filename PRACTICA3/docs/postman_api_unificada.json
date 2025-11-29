@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "api-unificada-fresh-go",
+		"name": "Fresh&Go - API Unificada (Nivel 2)",
+		"description": "Colección de pruebas para la API Unificada que integra CRM e IoT con validación JSON Schema, filtros avanzados, paginación y caché.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Información del Servicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": [""]
+				},
+				"description": "Obtiene información general sobre la API Unificada, características y estado de servicios integrados."
+			},
+			"response": []
+		},
+		{
+			"name": "2. Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/health",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["health"]
+				},
+				"description": "Verifica el estado de conexión con los servicios CRM e IoT."
+			},
+			"response": []
+		},
+		{
+			"name": "3. Detalle Cliente - Sin Filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clientes/detalle/CLI001",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["clientes", "detalle", "CLI001"]
+				},
+				"description": "Obtiene información completa de un cliente sin aplicar filtros."
+			},
+			"response": []
+		},
+		{
+			"name": "4. Detalle Cliente - Con Filtro Sensor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clientes/detalle/CLI001?sensorId=SENS001",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["clientes", "detalle", "CLI001"],
+					"query": [
+						{
+							"key": "sensorId",
+							"value": "SENS001",
+							"description": "Filtrar por sensor específico"
+						}
+					]
+				},
+				"description": "Obtiene información de un cliente filtrando por un sensor específico."
+			},
+			"response": []
+		},
+		{
+			"name": "5. Detalle Cliente - Con Filtro Tipo Alimento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clientes/detalle/CLI001?tipoAlimento=congelado",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["clientes", "detalle", "CLI001"],
+					"query": [
+						{
+							"key": "tipoAlimento",
+							"value": "congelado",
+							"description": "Tipo de alimento: congelado, refrigerado, delicado"
+						}
+					]
+				},
+				"description": "Obtiene información de un cliente filtrando por tipo de alimento."
+			},
+			"response": []
+		},
+		{
+			"name": "6. Detalle Cliente - Con Filtro Fechas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clientes/detalle/CLI001?from=2025-11-01T00:00:00Z&to=2025-11-26T23:59:59Z",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["clientes", "detalle", "CLI001"],
+					"query": [
+						{
+							"key": "from",
+							"value": "2025-11-01T00:00:00Z",
+							"description": "Fecha inicio (ISO-8601)"
+						},
+						{
+							"key": "to",
+							"value": "2025-11-26T23:59:59Z",
+							"description": "Fecha fin (ISO-8601)"
+						}
+					]
+				},
+				"description": "Obtiene información de un cliente filtrando lecturas por rango de fechas."
+			},
+			"response": []
+		},
+		{
+			"name": "7. Detalle Cliente - Con Filtro Estado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clientes/detalle/CLI001?estado=normal",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["clientes", "detalle", "CLI001"],
+					"query": [
+						{
+							"key": "estado",
+							"value": "normal",
+							"description": "Estado de lecturas: normal, alerta, critico"
+						}
+					]
+				},
+				"description": "Obtiene información de un cliente filtrando lecturas por estado."
+			},
+			"response": []
+		},
+		{
+			"name": "8. Detalle Cliente - Con Paginación",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clientes/detalle/CLI001?limit=10&page=1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["clientes", "detalle", "CLI001"],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "Máximo de lecturas por sensor"
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "Número de página para pedidos"
+						}
+					]
+				},
+				"description": "Obtiene información de un cliente con paginación."
+			},
+			"response": []
+		},
+		{
+			"name": "9. Detalle Cliente - Todos los Filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clientes/detalle/CLI001?sensorId=SENS001&tipoAlimento=congelado&from=2025-11-01T00:00:00Z&to=2025-11-26T23:59:59Z&estado=normal&limit=50&page=1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["clientes", "detalle", "CLI001"],
+					"query": [
+						{
+							"key": "sensorId",
+							"value": "SENS001"
+						},
+						{
+							"key": "tipoAlimento",
+							"value": "congelado"
+						},
+						{
+							"key": "from",
+							"value": "2025-11-01T00:00:00Z"
+						},
+						{
+							"key": "to",
+							"value": "2025-11-26T23:59:59Z"
+						},
+						{
+							"key": "estado",
+							"value": "normal"
+						},
+						{
+							"key": "limit",
+							"value": "50"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Obtiene información de un cliente aplicando todos los filtros disponibles."
+			},
+			"response": []
+		},
+		{
+			"name": "10. Resumen General",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/resumen",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["resumen"]
+				},
+				"description": "Obtiene estadísticas agregadas de los sistemas CRM e IoT."
+			},
+			"response": []
+		},
+		{
+			"name": "11. Cache Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/cache/stats",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["cache", "stats"]
+				},
+				"description": "Muestra estadísticas del sistema de caché interno."
+			},
+			"response": []
+		},
+		{
+			"name": "12. Limpiar Cache Completo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/cache",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["cache"]
+				},
+				"description": "Invalida todo el caché."
+			},
+			"response": []
+		},
+		{
+			"name": "13. Limpiar Cache CRM",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/cache?pattern=crm",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["cache"],
+					"query": [
+						{
+							"key": "pattern",
+							"value": "crm",
+							"description": "Patrón para invalidar caché específico"
+						}
+					]
+				},
+				"description": "Invalida el caché del servicio CRM."
+			},
+			"response": []
+		},
+		{
+			"name": "14. Limpiar Cache IoT",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/cache?pattern=iot",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["cache"],
+					"query": [
+						{
+							"key": "pattern",
+							"value": "iot",
+							"description": "Patrón para invalidar caché específico"
+						}
+					]
+				},
+				"description": "Invalida el caché del servicio IoT."
+			},
+			"response": []
+		},
+		{
+			"name": "15. Cliente No Existente (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clientes/detalle/CLI999",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["clientes", "detalle", "CLI999"]
+				},
+				"description": "Prueba de manejo de errores cuando el cliente no existe."
+			},
+			"response": []
+		},
+		{
+			"name": "16. Endpoint No Encontrado (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/invalid",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "4000",
+					"path": ["invalid"]
+				},
+				"description": "Prueba de manejo de errores cuando el endpoint no existe."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:4000",
+			"type": "string"
+		},
+		{
+			"key": "cliente_id",
+			"value": "CLI001",
+			"type": "string"
+		}
+	]
+}
