@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ClienteDetalle",
+  "description": "Schema unificado que combina datos de cliente (CRM) con sensores y lecturas (IoT)",
+  "type": "object",
+  "required": ["cliente", "pedidos", "vehiculos"],
+  "properties": {
+    "cliente": {
+      "type": "object",
+      "required": ["id", "nombre", "email"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        }
+      }
+    },
+    "pedidos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "clienteId", "proveedorId", "productos", "estado"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "clienteId": {
+            "type": "string"
+          },
+          "proveedorId": {
+            "type": "string"
+          },
+          "productos": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "nombre", "cantidad"],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "cantidad": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
+          },
+          "estado": {
+            "type": "string",
+            "enum": ["pendiente", "en_transito", "entregado"]
+          }
+        }
+      }
+    },
+    "vehiculos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["vehiculoId", "matricula", "sensores"],
+        "properties": {
+          "vehiculoId": {
+            "type": "string"
+          },
+          "matricula": {
+            "type": "string"
+          },
+          "capacidadKg": {
+            "type": "number"
+          },
+          "gps": {
+            "type": "string"
+          },
+          "sensores": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["sensorId", "nombre", "tipoAlimento", "lecturas"],
+              "properties": {
+                "sensorId": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "tipoAlimento": {
+                  "type": "string",
+                  "enum": ["congelado", "refrigerado", "delicado"]
+                },
+                "rangoMin": {
+                  "type": "number"
+                },
+                "rangoMax": {
+                  "type": "number"
+                },
+                "lecturas": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["id", "timestamp", "temperatura", "gps", "estado"],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "temperatura": {
+                        "type": "number"
+                      },
+                      "gps": {
+                        "type": "object",
+                        "required": ["latitud", "longitud"],
+                        "properties": {
+                          "latitud": {
+                            "type": "number"
+                          },
+                          "longitud": {
+                            "type": "number"
+                          },
+                          "altitud": {
+                            "type": "number"
+                          }
+                        }
+                      },
+                      "estado": {
+                        "type": "string",
+                        "enum": ["normal", "alerta", "critico"]
+                      },
+                      "alertaActiva": {
+                        "type": "boolean"
+                      },
+                      "cadenRota": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "totalPedidos": {
+          "type": "integer"
+        },
+        "totalVehiculos": {
+          "type": "integer"
+        },
+        "totalSensores": {
+          "type": "integer"
+        },
+        "totalLecturas": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
