@@ -1,0 +1,24 @@
+{
+  "name": "api-unificada",
+  "version": "2.0.0",
+  "description": "API Unificada Fresh&Go Nivel 2 - Integración CRM e IoT con PostgreSQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "cors": "^2.8.5",
+    "date-fns": "^2.30.0",
+    "winston": "^3.11.0",
+    "node-cache": "^5.1.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
